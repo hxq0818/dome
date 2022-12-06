@@ -21,17 +21,41 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.6.0
 Dialog DLL:      TCM.DLL V1.36.2.0
  
 <h2>Project:</h2>
-e:\hxq_work\STM32F103ZET6\CubeMX\merge_dome\103ZET6_2022_12_02\MDK-ARM\merge_dome.uvprojx
-Project File Date:  12/02/2022
+E:\hxq_work\STM32F103ZET6\CubeMX\merge_dome\103ZET6_2022_12_02\MDK-ARM\merge_dome.uvprojx
+Project File Date:  12/05/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Installation_Path\Keil\Core\ARM\ARMCC\Bin'
 Build target 'merge_dome'
+compiling gpio.c...
+../Core/Src/gpio.c(84): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+  	RCC_APB2PeriphClockCmd(BEEP_PORT_RCC,ENABLE);   /* 开启GPIO时钟 */
+../Core/Src/gpio.c(84): error:  #20: identifier "BEEP_PORT_RCC" is undefined
+  	RCC_APB2PeriphClockCmd(BEEP_PORT_RCC,ENABLE);   /* 开启GPIO时钟 */
+../Core/Src/gpio.c(87): error:  #136: struct "<unnamed>"  has no field "GPIO_Pin"
+  	GPIO_InitStructure.GPIO_Pin=BEEP_PIN;		//选择你要设置的IO口
+../Core/Src/gpio.c(87): error:  #20: identifier "BEEP_PIN" is undefined
+  	GPIO_InitStructure.GPIO_Pin=BEEP_PIN;		//选择你要设置的IO口
+../Core/Src/gpio.c(88): error:  #136: struct "<unnamed>"  has no field "GPIO_Mode"
+  	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;		  //设置推挽输出模式
+../Core/Src/gpio.c(88): error:  #20: identifier "GPIO_Mode_Out_PP" is undefined
+  	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_PP;		  //设置推挽输出模式
+../Core/Src/gpio.c(89): error:  #136: struct "<unnamed>"  has no field "GPIO_Speed"
+  	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;	  //设置传输速率
+../Core/Src/gpio.c(89): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+  	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;	  //设置传输速率
+../Core/Src/gpio.c(90): warning:  #223-D: function "GPIO_Init" declared implicitly
+  	GPIO_Init(BEEP_PORT,&GPIO_InitStructure); 	 /* 初始化GPIO */
+../Core/Src/gpio.c(90): error:  #20: identifier "BEEP_PORT" is undefined
+  	GPIO_Init(BEEP_PORT,&GPIO_InitStructure); 	 /* 初始化GPIO */
+../Core/Src/gpio.c(92): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+  	GPIO_ResetBits(BEEP_PORT,BEEP_PIN);
+../Core/Src/gpio.c: 3 warnings, 8 errors
 compiling main.c...
-linking...
-Program Size: Code=2844 RO-data=352 RW-data=16 ZI-data=1632  
-FromELF: creating hex file...
-"merge_dome\merge_dome.axf" - 0 Error(s), 0 Warning(s).
+compiling stm32f1xx_it.c...
+compiling SysTick.c...
+compiling stm32f1xx_hal_msp.c...
+"merge_dome\merge_dome.axf" - 8 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -54,6 +78,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.2.0
+Target not created.
 Build Time Elapsed:  00:00:02
 </pre>
 </body>

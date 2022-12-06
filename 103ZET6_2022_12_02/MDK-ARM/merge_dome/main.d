@@ -26,3 +26,4 @@ merge_dome\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 merge_dome\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 merge_dome\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 merge_dome\main.o: ../Core/Inc/gpio.h
+merge_dome\main.o: ../Core/Src/SysTick.h

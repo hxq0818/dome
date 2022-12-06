@@ -5,7 +5,7 @@
   * @brief          : Main program body
   ******************************************************************************
   * @attention
-  *
+  * 
   * Copyright (c) 2022 STMicroelectronics.
   * All rights reserved.
   *
@@ -19,7 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "gpio.h"
-
+#include "SysTick.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -79,7 +79,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+  SysTick_Init(72);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */

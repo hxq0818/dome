@@ -4,6 +4,7 @@
 "merge_dome\gpio.o"
 "merge_dome\stm32f1xx_it.o"
 "merge_dome\stm32f1xx_hal_msp.o"
+"merge_dome\systick.o"
 "merge_dome\stm32f1xx_hal_gpio_ex.o"
 "merge_dome\stm32f1xx_hal_tim.o"
 "merge_dome\stm32f1xx_hal_tim_ex.o"
